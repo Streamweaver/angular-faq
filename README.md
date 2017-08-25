@@ -13,7 +13,7 @@ A few things I tried out on my own that are different here if they are helpful t
 * Setup the cli project with the `--style=scss` option.
 * From porject folder npm install bootstrap 4.  Command below reflects version at time of writing but check the bootstrap 4 site for current command. 
   ```
-  npm install bootstrap@4.0.0-alpha.6
+  npm install bootstrap@4.0.0-alpha.6 jquery@latest tether --save
   ```
 * Create a new file in the project root for your own variables `scss/_variables.scss`
 * Import your variables file and the bootstrap scss file into `src/styles.scss` like so:
@@ -24,6 +24,8 @@ A few things I tried out on my own that are different here if they are helpful t
 // Load the main bootstrap file
 @import '../node_modules/bootstrap/scss/bootstrap';
 ```
+
+**note**: Also add the javascript files a per the static instructions in the regular course.
 
 That's it, bootstrap 4 should basically work.  More to come on javascript requirements as I discover them.
 
