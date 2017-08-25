@@ -1,28 +1,32 @@
-# AngularFaq
+# AngularFAQ
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+This project is an angular app that uses a simple local file as a dataservice.  This app is created as part of Lesson 7 of the Udemy Course [Angular 4 Front to Back](https://www.udemy.com/angular-4-front-to-back) which I highly recommend.
 
-## Development server
+This code is being kept around mostly for my own reference.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Notable Changes from Course Material
 
-## Code scaffolding
+A few things I tried out on my own that are different here if they are helpful to anyone using this as a reference too.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Bootstrap 4 setup for SCSS instead of static.
 
-## Build
+* Setup the cli project with the `--style=scss` option.
+* From porject folder npm install bootstrap 4.  Command below reflects version at time of writing but check the bootstrap 4 site for current command. 
+  ```
+  npm install bootstrap@4.0.0-alpha.6
+  ```
+* Create a new file in the project root for your own variables `scss/_variables.scss`
+* Import your variables file and the bootstrap scss file into `src/styles.scss` like so:
+```
+// My own variables file.
+@import 'scss/variables';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+// Load the main bootstrap file
+@import '../node_modules/bootstrap/scss/bootstrap';
+```
 
-## Running unit tests
+That's it, bootstrap 4 should basically work.  More to come on javascript requirements as I discover them.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Credits
+* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+* Code based on course matieral from [Brad Travesy](http://www.traversymedia.com/) with whatever other direction I take it here and there. 
