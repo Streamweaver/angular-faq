@@ -47,6 +47,8 @@ Generally I found some of the code in teh dataservices repetative and I can't st
 
 I removed the `dist/` subdirectory from `.gitignore` to upload he final build.  I then setup that directory as a deployment branch as per the instructions provided by @cobyism [here](https://gist.github.com/cobyism/4730490).
 
+Using github pages this worked pretty well and is viewable at [https://streamweaver.github.io/angular-faq/](https://streamweaver.github.io/angular-faq/);
+
 ## Credits
 * This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
 * Code based on course matieral from [Brad Travesy](http://www.traversymedia.com/) with whatever other direction I take it here and there. 
