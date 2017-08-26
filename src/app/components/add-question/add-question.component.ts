@@ -17,6 +17,7 @@ export class AddQuestionComponent implements OnInit {
   }
 
   addQuestion() {
+    this.q = this.q + ' (local only)';
     this.questionAdded.emit({q: this.q, a: this.a, hide: true});
     this.q = null;
     this.a = null;

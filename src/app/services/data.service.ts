@@ -34,7 +34,8 @@ export class DataService {
   }
 
   private _storeQuestions() {
-    localStorage.setItem(this._dataFile, JSON.stringify(this.questions));
+    // localStorage.setItem(this._dataFile, JSON.stringify(this.questions));
+    console.log("Save to localstorage disabled, question added only in memory.");
   }
 
   private _loadQuestions() {
