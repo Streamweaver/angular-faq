@@ -29,6 +29,10 @@ A few things I tried out on my own that are different here if they are helpful t
 
 That's it, bootstrap 4 should basically work.  More to come on javascript requirements as I discover them.
 
+## Deploying example site.
+
+I removed the `dist/` subdirectory from `.gitignore` to upload he final build.  I then setup that directory as a deployment branch as per the instructions provided by @cobyism [here](https://gist.github.com/cobyism/4730490).
+
 ## Credits
 * This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
 * Code based on course matieral from [Brad Travesy](http://www.traversymedia.com/) with whatever other direction I take it here and there. 
