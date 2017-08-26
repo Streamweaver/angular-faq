@@ -29,6 +29,20 @@ A few things I tried out on my own that are different here if they are helpful t
 
 That's it, bootstrap 4 should basically work.  More to come on javascript requirements as I discover them.
 
+### Bootstrap Theme
+
+Later on in the project I decided to import one of the free bootswatch themes for bootstrap 4.  As of this writing they are on a sub-page at [https://bootswatch.com/4-alpha/](https://bootswatch.com/4-alpha/), but I expect that will migrate to the top site or to other subfolders as BS4 attains new minor release verions.
+
+This applies to any of those themes:
+
+* Download the `_bootswatch.scss` file into `scss/`
+* Download the `_variables.scss` file for the theme and put in same folder.  I already had a file of that name there for my own setting so I downloaded that as `_variablesbootswatch.scss`
+* In `styles.scc` import the bootswatch variables **BEFORE** your local variables file if you want to be able to override them.  Then import bootswatch.scss **AFTER** the bootstrap import so it overwrites those where needed.
+
+### DataService methods
+
+Generally I found some of the code in teh dataservices repetative and I can't stand that so I moved the loading and saving of data for the localStore to private methods.  
+
 ## Deploying example site.
 
 I removed the `dist/` subdirectory from `.gitignore` to upload he final build.  I then setup that directory as a deployment branch as per the instructions provided by @cobyism [here](https://gist.github.com/cobyism/4730490).
