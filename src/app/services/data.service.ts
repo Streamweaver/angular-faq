@@ -4,32 +4,44 @@ import { Question } from '../models/question';
 @Injectable()
 export class DataService {
   questions: Question[];
+  private _dataFile = 'questions';
 
   constructor() {
-    this.questions = [
-      {
-        q: 'What is your name?',
-        a: 'My name is Scott',
-        hide: true
-      },
-      {
-        q: 'What is your favorite color?',
-        a: 'My favorite color is blue',
-        hide: true
-      },
-      {
-        q: 'What is your favorite programming language?',
-        a: 'My favorite programming language is python or Go',
-        hide: true
-      }
-    ];
+    this.questions = this.getQuestions();
   }
 
   getQuestions() {
+    if (localStorage.getItem('questions') === null) {
+      this.questions = [];
+    } else {
+      this.questions = JSON.parse(localStorage.getItem('questions'));
+    }
     return this.questions;
   }
 
   addQuestion(question: Question) {
     this.questions.unshift(question);
+    this._storeQuestions();
+  }
+
+  removeQuestion(question: Question) {
+    for (let i = 0; i < this.questions.length; i++) {
+      if (question === this.questions[i]) {
+        this.questions.splice(i, 1);
+        this._storeQuestions();
+      }
+    }
+  }
+
+  private _storeQuestions() {
+    localStorage.setItem(this._dataFile, JSON.stringify(this.questions));
+  }
+
+  private _loadQuestions() {
+    if (localStorage.getItem(this._dataFile) === null) {
+      this.questions = [];
+    } else {
+      this.questions = JSON.parse(localStorage.getItem(this._dataFile));
+    }
   }
 }
