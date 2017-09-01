@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -8,6 +9,7 @@ import { QuestionListComponent } from './components/question-list/question-list.
 import { DataService } from './services/data.service';
 import { QuestionComponent } from './components/question/question.component';
 import { AddQuestionComponent } from './components/add-question/add-question.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { AddQuestionComponent } from './components/add-question/add-question.com
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     DataService
